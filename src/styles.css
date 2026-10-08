@@ -7,4 +7,3 @@
 @media(max-width:350px){.gallery-grid{grid-template-columns:1fr;grid-auto-rows:260px}.gallery-item-0{grid-column:span 1}.hero-tags{font-size:8px}.container{width:calc(100% - 28px)}h1{font-size:3rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 [data-reveal].reveal-ready{animation:none;opacity:0;transform:translateY(15px);transition:opacity .65s ease,transform .65s ease}[data-reveal].reveal-ready.visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){[data-reveal].reveal-ready{opacity:1;transform:none}}
-.brand img,.footer-brand img{clip-path:ellipse(45.5% 47.5% at 51% 51%)}
