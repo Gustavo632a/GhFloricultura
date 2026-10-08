@@ -1,0 +1,5 @@
+import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { createWhatsAppUrl, contactMessage } from '../utils/whatsapp';
+export function WhatsAppLink({ children='Falar no WhatsApp', message=contactMessage, className='button' }) { return <a className={className} href={createWhatsAppUrl(message)} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/>{children}<ArrowUpRight size={17}/></a>; }
+export function Photo({name,alt,className='',hero=false,...props}) { return <img className={className} src={`/images/${name}.webp`} srcSet={`/images/${name}-480.webp 480w, /images/${name}.webp 960w`} sizes={hero?'(max-width: 760px) 100vw, 50vw':'(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw'} alt={alt} width="960" height="960" loading={hero?'eager':'lazy'} fetchPriority={hero?'high':'auto'} {...props}/>; }
+export function SectionTitle({eyebrow,title,children}) {return <div className="section-title" data-reveal><span className="eyebrow">{eyebrow}</span><h2>{title}</h2>{children&&<p>{children}</p>}</div>;}

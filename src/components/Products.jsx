@@ -1,0 +1,5 @@
+import { ArrowUpRight } from 'lucide-react';
+import { products } from '../data/products';
+import { Photo, SectionTitle } from './Shared';
+import { createWhatsAppUrl } from '../utils/whatsapp';
+export default function Products(){return <section id="plantas" className="section products"><div className="container"><SectionTitle eyebrow="PARA CULTIVAR E ENCANTAR" title="Um pouco da nossa natureza.">Conheça alguns dos tipos de plantas e flores disponíveis na GH Floricultura.</SectionTitle><div className="product-grid">{products.map((p,i)=><article className="product-card" key={p.image} data-reveal><div className="product-photo"><Photo name={p.image} alt={p.alt}/><span className="photo-number">0{i+1}</span></div><h3>{p.title}</h3><p>{p.description}</p><a className="card-link" target="_blank" rel="noopener noreferrer" href={createWhatsAppUrl('Olá! Conheci a GH Floricultura pelo site e gostaria de consultar as plantas disponíveis.')} aria-label={`Consultar disponibilidade: ${p.title}`}>Consultar disponibilidade<ArrowUpRight size={17}/></a></article>)}</div></div></section>;}
